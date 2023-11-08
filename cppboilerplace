@@ -1,0 +1,5 @@
+#!/bin/bash
+
+touch main.cpp
+
+echo -e "#include <iostream>\n\nint main() {\n\n\tstd::cout << \"Hello, world!\" << std::endl;\n\n\treturn 0;\n}" > main.cpp

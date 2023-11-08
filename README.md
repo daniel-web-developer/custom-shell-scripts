@@ -4,7 +4,7 @@ To make my work easier, I've coded some simple shell scripts. Here's what each o
 
 ## Glossary
 
-- [Instructions][#instructions]
+- [Instructions](#instructions)
 - [Commands](#commands)
   - [cboilerplate](#cboilerplate) 
   - [cppboilerplate](#cppboilerplate) 

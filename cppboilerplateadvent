@@ -1,0 +1,6 @@
+#!/bin/bash
+
+touch main.cpp
+touch input.txt
+
+echo -e "#include <iostream>\n#include <string>\n#include <fstream>\n\nint main() {\n\n\tstd::string line;\n\tstd::ifstream file("input.txt");\n\n\tif (!file.is_open()) {\n\t\tstd::cout << \"Couldn't open file. Terminating program.\";\n\n\t\treturn 1;\n\t}\n\n\twhile (std::getline(file, line)) {\n\n\t}\n\n\treturn 0;\n}" > main.cpp

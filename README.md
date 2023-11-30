@@ -8,6 +8,7 @@ To make my work easier, I've coded some simple shell scripts. Here's what each o
 - [Commands](#commands)
   - [cboilerplate](#cboilerplate) 
   - [cppboilerplate](#cppboilerplate) 
+  - [cppboilerplateadvent](#cppboilerplateadvent) 
   - [changeresolution](#changeresolution) 
   - [createsassfiles](#createsassfiles) 
 
@@ -27,6 +28,10 @@ Creates a boilerplate file for C projects.
 ### cppboilerplate
 
 Same thing, but for C++ instead.
+
+### cppboilerplateadvent
+
+Same thing as the above, but tuned to [Advent of Code](https://adventofcode.com/) problems.
 
 ### changeresolution
 

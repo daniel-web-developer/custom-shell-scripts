@@ -31,7 +31,7 @@ Same thing, but for C++ instead.
 
 ### cppboilerplateadvent
 
-Same thing as the above, but tuned to [Advent of Code](https://adventofcode.com/) problems.
+Same thing as the above, but changed specifically to work with [Advent of Code](https://adventofcode.com/) problems.
 
 ### changeresolution
 

@@ -3,5 +3,9 @@
 touch main.cpp
 touch input.txt
 touch test.txt
+touch Makefile
 
-echo -e "#include <iostream>\n#include <string>\n#include <fstream>\n\nint main() {\n\n\tstd::string line;\n\tstd::ifstream file(\"test.txt\");\n\n\tif (!file.is_open()) {\n\t\tstd::cout << \"Couldn't open file. Terminating program.\";\n\n\t\treturn 1;\n\t}\n\n\twhile (std::getline(file, line)) {\n\n\t}\n\n\tfile.close();\n\n\treturn 0;\n}" > main.cpp
+echo -e "#include <iostream>\n#include <string>\n#include <fstream>\n\nint main(int argc, char *argv[]) {\n\nif (argc != 2) {\n\t\tstd::cout << \"Please only specify the name of the input file.\" << std::endl;\n\t\treturn 1;\n\t}\n\n\tstd::string line;\n\tstd::ifstream file(\"test.txt\");\n\n\tif (!file.is_open()) {\n\t\tstd::cout << \"Couldn't open file. Terminating program.\";\n\n\t\treturn 1;\n\t}\n\n\twhile (std::getline(file, line)) {\n\n\t}\n\n\tfile.close();\n\n\treturn 0;\n}" > main.cpp
+
+echo -e "CXX = g++\nCXXFLAGS = -Wall -O2\nSRC = main.cpp\nTARGET = a.out\n\n\$(TARGET): \$(SRC)\n\t\$(CXX) \$(CXXFLAGS) -o \$(TARGET) \$(SRC)\n\n.PHONY: clean test input\n\nclean:\n\trm -f *.o *.out\n\ntest:\n\t./a.out test.txt\n\ninput:\n\t./a.out input.txt" > Makefile
+

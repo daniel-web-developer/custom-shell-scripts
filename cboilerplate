@@ -1,5 +1,8 @@
 #!/bin/bash
 
 touch main.c
+touch Makefile
 
 echo -e "#include <stdio.h>\n\nint main() {\n\n\tprintf(\"Hello, world!\");\n\n\treturn 0;\n}" > main.c
+
+echo -e "CC = gcc\nCCFLAGS = -Wall -O2\nSRC = main.c\nTARGET = a.out\n\n\$(TARGET): \$(SRC)\n\t\$(CC) \$(CCFLAGS) -o \$(TARGET) \$(SRC)\n\n.PHONY: clean \n\nclean:\n\trm -f *.o *.out" > Makefile

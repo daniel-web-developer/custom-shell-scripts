@@ -5,6 +5,6 @@ touch input.txt
 touch test.txt
 touch Makefile
 
-echo -e "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n\n\tFILE *file = fopen(\"input.txt\", \"r\");\n\tchar line[1024];\n\n\tif (file == NULL) {\n\t\tprintf(\"Couldn't open file.\");\n\n\t\treturn -1;\n\n\t}\n\n\twhile (fgets(line, sizeof(line), file) != NULL) {\n\n\t}\n\n\treturn 0;\n}" > main.c
+echo -e "#include <stdio.h>\n#include <stdlib.h>\n\nint main(int argc, char *argv[]) {\n\n\tFILE *file = fopen(\"input.txt\", \"r\");\n\tchar line[1024];\n\n\tif (file == NULL) {\n\t\tprintf(\"Couldn't open file.\");\n\n\t\treturn -1;\n\n\t}\n\n\twhile (fgets(line, sizeof(line), file) != NULL) {\n\n\t}\n\n\tfclose(file);\n\n\treturn 0;\n}" > main.c
 
 echo -e "CC = gcc\nCCFLAGS = -Wall -O2\nSRC = main.c\nTARGET = a.out\n\n\$(TARGET): \$(SRC)\n\t\$(CC) \$(CCFLAGS) -o \$(TARGET) \$(SRC)\n\n.PHONY: clean \n\nclean:\n\trm -f *.o *.out" > Makefile
